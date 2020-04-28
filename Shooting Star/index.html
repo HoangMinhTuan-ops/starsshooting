@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=	, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Creating Navigation  -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <!-- Use element to open the nav -->
+    <div id="navController">
+    <span style="font-size: 25px;cursor: pointer" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <div id="main"></div>
+
+    <script>
+        function openNav(){
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav(){
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <section class="showcase">
+
+        
+    
+
+        <div class="video-container">
+            <video src="./image/video.mov" autoplay muted loop></video>
+        </div>
+        <div class="content">
+            <h1>Shooting Stars</h1>
+            <h3>Full screen video landing page</h3>
+            <a href="#about" class="btn">Read more</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <h1>About</h1>
+        <p>
+            Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. 
+            Nisi quis voluptatibus sit expedita? Facilis corporis alias dolorem esse? 
+        </p>
+        <h2>Follow me on social media</h2>
+        <p>Inspired by Traversy</p>
+        <p>Video source from Traversy</p>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/tuan-hoang-minh/"><i class="fab fa-linkedin fa-3x"></i></a>
+            <a href="https://www.linkedin.com/in/tuan-hoang-minh/"><i class="fab fa-xing fa-3x"></i></a>
+        </div>
+    </section>
+</body>
+</html>

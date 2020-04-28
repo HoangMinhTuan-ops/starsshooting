@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+    --primary-color: #3a4052;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+h1{
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.showcase {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.video-container{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--primary-color) url('/image/shooting-star-candlestick-pattern_body_GettyImages-543217268.jpg.full.jpg') no-repeat center center/cover;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-container::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.content{
+    z-index: 1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--primary-color);
+    color: #fff;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    margin-top: 25px;
+    opacity: 0.7;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+.about {
+    padding: 40px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 0.5em;
+}
+
+.about h2 {
+    margin: 30px 0;
+    color: var(--primary-color);
+}
+
+.social a{
+    margin: 0 5px;
+}
+
+/* SIDE NAVBAR */
+/* The side nav menu */
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed; /*stay in place*/
+    z-index: 1; /*stay on top*/
+    top: 0; 
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden; /*disable horizontal scroll*/
+    padding-top: 60px;
+    transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
+}
+
+/*The navigation menu links*/
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/*when you mouse over the navigation links, change their color*/
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/*position and style the close button (top right corner)*/
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/*style page content*/
+#main {
+    transition: margin-left .5s;
+    
+}
+
+.navController{
+    overflow: hidden;
+    background-color: #111;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    color: whitesmoke;
+}
+
+@media screen and (max-height: 450px){
+    .sidenav{padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
